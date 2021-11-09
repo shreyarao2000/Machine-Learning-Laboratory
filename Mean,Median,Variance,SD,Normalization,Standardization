@@ -1,0 +1,78 @@
+#MEAN
+
+numbers=[1,2,3,4,5,6]
+n=len(numbers)
+sums=sum(numbers)
+
+mean=sums/n
+
+print("Mean is " + str(mean))
+
+Mean is 3.5
+
+#MEDIAN
+
+num = [1, 2, 3, 4, 5]
+n = len(num)
+num.sort()
+  
+if n % 2 == 0:
+    median1 = num[n//2]
+    median2 = num[n//2 - 1]
+    median = (median1 + median2)/2
+else:
+    median = num[n//2]
+print("Median is: " + str(median))
+
+Median is: 3
+
+#VARIANCE AND STANDARD DEVIATION
+test_list = [4, 5, 8, 9, 10]
+mean = sum(test_list) / len(test_list)
+variance = sum([((x - mean) ** 2) for x in test_list]) / len(test_list)
+print("vaiance is : " +str(variance))
+res = variance ** 0.5
+print("Standard deviation of sample is : " + str(res))
+
+vaiance is : 5.36
+Standard deviation of sample is : 2.3151673805580453
+
+#NORMALIZATION
+n_list=[40,200,30.5,28,54,60]
+list_max=max(n_list)
+list_min=min(n_list)
+print("value: Normalized value\n")
+for x in n_list:
+    n=(x-list_min)/(list_max-list_min)
+    print("{} : {}".format(x,n))
+    
+  value: Normalized value
+
+1 : 0.0
+2 : 0.2
+3 : 0.4
+4 : 0.6
+5 : 0.8
+6 : 1.0
+
+#STANDARDIZATION
+
+import math
+a=[24,20,67.5,40,5,60]
+mean=sum(a)/len(a)
+variance=sum((i - mean) ** 2 for i in a) / len(a)
+sd=variance**0.5
+print("value: Standardized value\n")
+for x in a:
+    s=(x-mean)/sd
+    print("{} : {}".format(x,s))
+    
+    value: Standardized value
+
+24 : -0.5453864842504663
+20 : -0.725928216967862
+67.5 : 1.418004859051212
+40 : 0.17678044661911654
+5 : -1.4029597146580959
+60 : 1.079489110206095
+
